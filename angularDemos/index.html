@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+<head>
+	<title>Directives</title>
+</head>
+<body>
+<div class="container" data-ng-init="customers=[{name:'Ahmad',city:'Kabul',age:25},{name:'Ali',city:'Kandahar',age:23},{name:'walid',city:'Takhar',age:42}]">
+   <p>Name:</p>
+   <input type="text" ng-model="name"><br>
+
+   <ul>
+   	<li data-ng-repeat="cust in customers | filter:name">
+   		{{cust.name+' '+ cust.city}} 
+   	</li>
+   </ul>
+</div>
+
+<script type="text/javascript" src="angular.min.js"></script>
+</body>
+</html>
